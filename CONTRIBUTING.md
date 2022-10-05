@@ -10,7 +10,7 @@ Pull requests
     # Navigate to the newly cloned directory
     cd BANKI
     # Assign the original repo to a remote called "upstream"
-    git remote add upstream https://github.com/curtisbarnard/BANKI.git
+    git remote add upstream https://github.com/micahbear/BANKI.git
 
     If you cloned a while ago, get the latest changes from upstream:
 
