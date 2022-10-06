@@ -88,13 +88,33 @@ console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchT
 
 # match
 
--What it does:
+-What it does: Retrieves the result of matching a string against a regular expression (regrex)
 
--How it works:
+-How it works: calls the match method of the arguiment with the string as the first parameter.
 
 -Time Complexity: why?:
 
 -Example:
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+console.log(found);
+// expected output: Array ["T", "I"]
+
+const str = 'For more information, see Chapter 3.4.5.1';
+const re = /see (chapter \d+(\.\d)_)/i;
+const found = str.match(re);
+console.log(found);
+// logs [ 'see Chapter 3.4.5.1',
+// 'Chapter 3.4.5.1',
+// '.1',
+// index: 22,
+// input: 'For more information, see Chapter 3.4.5.1' ]
+// 'see Chapter 3.4.5.1' is the whole match.
+// 'Chapter 3.4.5.1' was captured by '(chapter \d+(\.\d)_)'.
+// '.1' was the last value captured by '(\.\d)'.
+// The 'index' property (22) is the zero-based index of the whole match.
+// The 'input' property is the original string that was parsed.
 
 # repeat
 
