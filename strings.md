@@ -65,13 +65,26 @@ console.log(str.includes('To be', 1)) // false
 
 # indexOf
 
--What it does:
+-What it does: This method when given one argument a substring to search for, searches the entire calling string and returns the index of the first occurance. If given a second argument: a number, the method returns the index of the first occurrence of the specified substring at a position greater than or equal to that position number.
 
--How it works:
+-How it works: When passing in the substring that you are searching indexOf searches the string and returns the index when it is first found.
 
 -Time Complexity: why?:
 
 -Example:
+const myString = 'brie, pepper jack, cheddar';
+console.log(`myString.indexOf("cheddar") is ${myString.indexOf('cheddar')}`);
+// logs 19
+const myCapString = 'Brie, Pepper Jack, Cheddar';
+console.log(`myCapString.indexOf("cheddar") is ${myCapString.indexOf('cheddar')}`);
+// logs -1
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+const searchTerm = 'dog';
+const indexOfFirst = paragraph.indexOf(searchTerm);
+console.log(`The index of the first "${searchTerm}" from the beginning is ${indexOfFirst}`);
+// expected output: "The index of the first "dog" from the beginning is 40"
+console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, (indexOfFirst + 1))}`);
+// expected output: "The index of the 2nd "dog" is 52"
 
 # match
 

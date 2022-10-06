@@ -154,7 +154,7 @@ Most of the technical questions should have a three sentence response in the EUE
     <https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang>
 
 - [ ] What kinds of things must you be wary of when designing or developing for multilingual sites?
-  - **Explanation:**
+  - **Explanation:** - Always use the lang the dir attributes - Avoid talking about right side and left side - Don't ever concatenate translated strings - Don't translate date formats - Allow user to change country/language easily - Be mindful of colors - Useful-to-have-include the locale in the path
   - **Use:**
   - **Example:**
   - **Source:**
