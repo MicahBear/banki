@@ -118,33 +118,102 @@ console.log(found);
 
 # repeat
 
--What it does:
+-What it does: method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together
 
--How it works:
+-How it works:An integer between 0 and +Infinity, indicating the number of times to repeat the string. A new string containing the specified number of copies of the given string
 
 -Time Complexity: why?:
 
 -Example:
+'abc'.repeat(-1) // RangeError
+'abc'.repeat(0) // ''
+'abc'.repeat(1) // 'abc'
+'abc'.repeat(2) // 'abcabc'
+'abc'.repeat(3.5) // 'abcabcabc' (count will be converted to integer)
+'abc'.repeat(1/0) // RangeError
+const chorus = 'Because I\'m happy. ';
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(27)}`);
+// expected output: "Chorus lyrics for "Happy": // repeated 27 times.
 
 # replace
 
--What it does:
+-What it does: Returns a new string with one, some, or all matches of pattern replaced by a replacement. The pattern can be a string or a RegExp and the replacement can be a string or a function called for each match.
 
--How it works:
+-How it works: method does not mutate the string value it's called on. It returns a new string.
+function:The arguments to the function are as follows:
+
+match
+
+    The matched substring. (Corresponds to $& above.)
+
+p1, p2, …, pN
+
+    The nth string found by a capture group (including named capturing groups), provided the first argument to replace() is a RegExp object. (Corresponds to $1, $2, etc. above.) For example, if the pattern is /(\a+)(\b+)/, then p1 is the match for \a+, and p2 is the match for \b+. If the group is part of a disjunction (e.g. "abc".replace(/(a)|(b)/, replacer)), the unmatched alternative will be undefined.
+
+offset
+
+    The offset of the matched substring within the whole string being examined. For example, if the whole string was 'abcd', and the matched substring was 'bc', then this argument will be 1.
+
+string
+
+    The whole string being examined.
+
+groups
+
+    An object whose keys are the used group names, and whose values are the matched portions (undefined if not matched). Only present if the pattern contains at least one named capturing group.
+
+The exact number of arguments depends on whether the first argument is a RegExp object — and, if so, how many capture groups it has.
 
 -Time Complexity: why?:
 
 -Example:
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+console.log(p.replace('dog', 'monkey'));
+// expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+const regex = /Dog/i;
+console.log(p.replace(regex, 'ferret'));
+// expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+const str = 'Twas the night before Xmas...';
+const newstr = str.replace(/xmas/i, 'Christmas');
+console.log(newstr); // Twas the night before Christmas...
+const re = /(\w+)\s(\w+)/;
+const str = 'John Smith';
+const newstr = str.replace(re, '$2, $1');
+console.log(newstr);  // Smith, John
+function replacer(match, p1, p2, p3, offset, string) {
+  // p1 is non-digits, p2 digits, and p3 non-alphanumerics
+  return [p1, p2, p3].join(' - ');
+}
+const newString = 'abc12345#$_%'.replace(/([^\d]_)(\d*)([^\w]*)/, replacer);
+console.log(newString); // abc - 12345 - #$\*%
 
 # search
 
--What it does:
+-What it does: Executes a seach for a match between a regular expression and this String object
 
--How it works:
+-How it works: Parameters :regexp
+A regular expression object, or any object that has a search method.
+If regexp is not a RegExp object and does not have a search method, it is implicitly converted to a RegExp by using new RegExp(regexp).
+Return value
+The index of the first match between the regular expression and the given string, or -1 if no match was found
+String.prototype.search() itself is very simple — it simply calls the Symbol.search method of the argument with the string as the first parameter. The actual implementation comes from
 
 -Time Complexity: why?:
 
 -Example:
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+// any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+console.log(paragraph.search(regex));
+// expected output: 43
+console.log(paragraph[paragraph.search(regex)]);
+// expected output: "."
+
+const str = "hey JudE";
+const re = /[A-Z]/;
+const reDot = /[.]/;
+console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 
 # slice
 
