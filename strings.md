@@ -90,7 +90,7 @@ console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchT
 
 -What it does: Retrieves the result of matching a string against a regular expression (regrex)
 
--How it works: calls the match method of the arguiment with the string as the first parameter.
+-How it works: calls the match method of the arguiment with the string as the first parameter. Returns an array with contents that depend on the presence or absence of the global (g) flag
 
 -Time Complexity: why?:
 
