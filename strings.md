@@ -387,13 +387,26 @@ console.log(aString.substr(20, 2)); // ''
 
 # toLowerCase
 
--What it does:
+-What it does: This method returns the calling string value to lower case.
 
--How it works:
+-How it works: Syntax:toLowerCase()
+
+Return value
+
+A new string representing the calling string converted to lower case.
+Description
+
+The toLowerCase() method returns the value of the string converted to lower case. toLowerCase() does not affect the value of the string str itself.
 
 -Time Complexity: why?:
 
 -Example:
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+console.log(sentence.toLowerCase());
+// expected output: "the quick brown fox jumps over the lazy dog."
+
+console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 # toUpperCase
 
