@@ -410,13 +410,47 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 # toUpperCase
 
--What it does:
+-What it does: This method returns the calling string value to uppercase.
 
--How it works:
+-How it works: Syntax:toUpperCase()
+
+Return value
+
+A new string representing the calling string converted to upper case.
+Exceptions
+
+TypeError
+
+    When called on null or undefined, for example, String.prototype.toUpperCase.call(undefined).
+
+Description
+
+The toUpperCase() method returns the value of the string converted to uppercase. This method does not affect the value of the string itself since JavaScript strings are immutable.
 
 -Time Complexity: why?:
 
 -Example:
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+console.log(sentence.toUpperCase());
+// expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+
+console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+
+Conversion of non-string this values to strings
+
+This method will convert any non-string value to a string, when you set its this to a value that is not a string:
+
+const a = String.prototype.toUpperCase.call({
+toString() {
+return 'abcdef';
+}
+});
+
+const b = String.prototype.toUpperCase.call(true);
+
+// prints out 'ABCDEF TRUE'.
+console.log(a, b);
 
 # trim
 
