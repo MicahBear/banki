@@ -2,7 +2,7 @@
 
 - Any questions on this list are fair game for technical interviews.
 - Resources where you can find most answers are at the end.
-- Original list courtesy of https://leonnoel.com/100devs/
+- Original list courtesy of <https://leonnoel.com/100devs/>
 
 ---
 
@@ -138,16 +138,21 @@ Most of the technical questions should have a three sentence response in the EUE
 
 ### HTML
 
-- [ ] What does a doctype do?
+- [x] What does a doctype do?
   - **Explanation:**DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers
   - **Use:** first line of code required in every HTML
   - **Example:** <!DOCTYPE html> : Doctype syntax for HTML 5 and beyond
   - **Source:** <https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/>
-- [ ] How do you serve a page with content in multiple languages?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [x] How do you serve a page with content in multiple languages?
+
+  - **Explanation:** setting the lang attributes on the various elements within the page.
+  - **Use:** The lang attribute can be used on various elements (typically html, p, li...)
+  - **Example:** <html lang="en">
+     <p>French "<span lang="fr">Bonjour</span> "</p>
+
+  - **Source:** <https://www.geeksforgeeks.org/how-to-serve-a-page-with-content-in-multiple-languages/>
+    <https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang>
+
 - [ ] What kinds of things must you be wary of when designing or developing for multilingual sites?
   - **Explanation:**
   - **Use:**
@@ -489,7 +494,7 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Make this work: `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5] `
+- [ ] Make this work: `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]`
   - **Explanation:**
   - **Use:**
   - **Example:**
@@ -942,7 +947,7 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - **Pseudocode**
   - Write pseudocode of each of the steps
 
-## Resources:
+## Resources
 
 - [https://eloquentjavascript.net/](https://eloquentjavascript.net/)
 - [https://github.com/getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
