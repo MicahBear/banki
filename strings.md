@@ -454,10 +454,30 @@ console.log(a, b);
 
 # trim
 
--What it does:
+-What it does: This method removes whitespace from both ends of a string and returns a new string, without modifying the original string.
 
--How it works:
+-How it works: Syntax:trim()
+
+Return value
+
+A new string representing str stripped of whitespace from both its beginning and end.
+
+If neither the beginning or end of str has any whitespace, a new string is still returned (essentially a copy of str), with no exception being thrown.
+
+To return a new string with whitespace trimmed from just one end, use trimStart() or trimEnd().
 
 -Time Complexity: why?:
 
 -Example:
+const greeting = ' Hello world! ';
+
+console.log(greeting);
+// expected output: " Hello world! ";
+
+console.log(greeting.trim());
+// expected output: "Hello world!";
+
+The following example displays the lowercase string 'foo':
+
+const orig = ' foo ';
+console.log(orig.trim()); // 'foo'
