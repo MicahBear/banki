@@ -260,23 +260,130 @@ console.log(str5); // OUTPUT: ""
 
 # split
 
--What it does:
+-What it does:The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
--How it works:
+-How it works: Parameters:
+separator Optional
+The pattern describing where each split should occur. Can be a string or an object with a Symbol.split method — the typical example being a regular expression. If undefined, the original target string is returned wrapped in an array.
+limit Optional
+A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified separator, but stops when limit entries have been placed in the array. Any leftover text is not included in the array at all.
+The array may contain fewer entries than limit if the end of the string is reached before the limit is reached.
+If limit is 0, [] is returned.
+Return value
+An Array of strings, split at each point where the separator occurs in the given string.
+If separator is a non-empty string, the target string is split by all matches of the separator without including
+Description
+separator in the results. For example, a string containing tab separated values (TSV) could be parsed by passing a tab character as the separator, like myString.split("\t"). If separator contains multiple characters, that entire character sequence must be found in order to split. If separator appears at the beginning (or end) of the string, it still has the effect of splitting, resulting in an empty (i.e. zero length) string appearing at the first (or last) position of the returned array. If separator does not occur in str, the returned array contains one element consisting of the entire string.
+
+If separator is an empty string (""), str is converted to an array of each of its UTF-16 "characters", without empty strings on either ends of the resulting string.
 
 -Time Complexity: why?:
 
 -Example:
+const str = 'The quick brown fox jumps over the lazy dog.';
+const words = str.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+const chars = str.split('');
+console.log(chars[8]);
+// expected output: "k"
+const strCopy = str.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
 
-# substr
+const emptyString = '';
 
--What it does:
+// string is empty and no separator is specified
+console.log(emptyString.split());
+// [""]
 
--How it works:
+// string and separator are both empty strings
+console.log(emptyString.split(emptyString));
+// []
+
+The following example defines a function that splits a string into an array of strings using separator. After splitting the string, the function logs messages indicating the original string (before the split), the separator used, the number of elements in the array, and the individual array elements.
+
+function splitString(stringToSplit, separator) {
+const arrayOfStrings = stringToSplit.split(separator)
+
+console.log('The original string is: ', stringToSplit)
+console.log('The separator is: ', separator)
+console.log('The array has ', arrayOfStrings.length, ' elements: ', arrayOfStrings.join(' / '))
+}
+
+const tempestString = 'Oh brave new world that has such people in it.'
+const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'
+
+const space = ' '
+const comma = ','
+
+splitString(tempestString, space)
+splitString(tempestString)
+splitString(monthString, comma)
+
+The original string is: "Oh brave new world that has such people in it."
+The separator is: " "
+The array has 10 elements: Oh / brave / new / world / that / has / such / people / in / it.
+
+The original string is: "Oh brave new world that has such people in it."
+The separator is: "undefined"
+The array has 1 elements: Oh brave new world that has such people in it.
+
+The original string is: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+The separator is: ","
+The array has 12 elements: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec
+
+# substr - Deprecated
+
+-What it does: The substr() method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
+
+-How it works: Parameters
+
+start
+
+    The index of the first character to include in the returned substring.
+
+length Optional
+
+    The number of characters to extract.
+
+Return value
+
+A new string containing the specified part of the given string.
+Description
+
+A string's substr() method extracts length characters from the string, counting from the start index.
+
+    If start >= str.length, an empty string is returned.
+    If start < 0, the index starts counting from the end of the string. More formally, in this case the substring starts at max(start + str.length, 0).
+    If start is omitted or undefined, it's treated as 0.
+    If length is omitted or undefined, or if start + length >= str.length, substr() extracts characters to the end of the string.
+    If length < 0, an empty string is returned.
+    For both start and length, NaN is treated as 0.
+
+Although you are encouraged to avoid using substr(), there is no trivial way to migrate substr() to either slice() or substring() in legacy code without essentially writing a polyfill for substr(). For example, str.substr(a, l), str.slice(a, a + l), and str.substring(a, a + l) all have different results when str = "01234", a = 1, l = -2 — substr() returns an empty string, slice() returns "123", while substring() returns "0". The actual refactoring path depends on the knowledge of the range of a and l.
 
 -Time Complexity: why?:
 
 -Example:
+const str = 'Mozilla';
+
+console.log(str.substr(1, 2));
+// expected output: "oz"
+
+console.log(str.substr(2));
+// expected output: "zilla"
+
+const aString = 'Mozilla';
+
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
+console.log(aString.substr(-20, 2)); // 'Mo'
+console.log(aString.substr(20, 2)); // ''
 
 # toLowerCase
 
