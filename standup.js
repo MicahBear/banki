@@ -29,3 +29,10 @@ function fizzBuzz(num) {
 fizzBuzz(5) //1, 2, fizz, 4, buzz
 fizzBuzz(9) //1, 2, fizz, 4, buzz, fizz, 7, 8, fizz
 fizzBuzz(15) //1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string.For example:
+
+// domainName("http://github.com/carbonfive/raygun") == "github"
+// domainName("http://www.zombie-bites.com") == "zombie-bites"
+// domainName("https://www.cnet.com") == "cnet"
+//  Use replace on the parts of the url you want gone.You can replace with an empty string ''.Then split the string using.as the seperator and take the first part[0]
