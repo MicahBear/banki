@@ -172,14 +172,29 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Source:** <https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes>
 - [ ] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
   - **Explanation:**
+    - Semantics - Allowing you to describe more precisely what your content is.
+    - Connectivity - Allowing you to communicate with the server in new and innovative ways.
+    - Offline and storage - Allowing webpages to store data on the client-side locally and operate offline more efficiently.
+    - Multimedia - Making video and audio first-class citizens in the Open Web.
+    - 2D/3D graphics and effects - Allowing a much more diverse range of presentation options.
+    - Performance and integration - Providing greater speed optimization and better usage of computer hardware.
+    - Device access - Allowing for the usage of various input and output devices.
+    - Styling - Letting authors write more sophisticated themes.
   - **Use:**
   - **Example:**
-  - **Source:**
+  - **Source:** <https://www.frontendinterviewhandbook.com/html-questions#consider-html5-as-an-open-web-platform-what-are-the-building-blocks-of-html5>
 - [ ] Describe the difference between a cookie, sessionStorage and localStorage.
+
   - **Explanation:**
+
+    - cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. The browser may store the cookie and send it back to the same server with later requests. Typically, an HTTP cookie is used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the stateless HTTP protocol.
+    - Session Storage - can store data on client side, but only for current session. This means, once you close your web browser tab, all session storage data will be erased. Even for new tab in browser, session storage data is not accessible. Session storage data is also stored in key-valuepair. Refreshing or reloading browser tab cannot remove session data.
+    - HTML5 Local Storage can store 5-10 mb data,( can vary on different browsers) on client side same like cookies. But cookies can store only upto 4kb data, and data is stored in string type only. Local storage can store data in key-value pair. Local storage data is easy to parse than cookies.
+
   - **Use:**
   - **Example:**
-  - **Source:**
+  - **Source:** <https://tutorial.techaltum.com/local-and-session-storage.html> <https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies> <https://www.frontendinterviewhandbook.com/html-questions/#describe-the-difference-between-a-cookie-sessionstorage-and-localstorage>
+
 - [ ] Describe the difference between `<script>, <script async> and <script defer>`.
   - **Explanation:**
   - **Use:**
