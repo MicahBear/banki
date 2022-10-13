@@ -157,12 +157,19 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Explanation:** - Always use the lang the dir attributes - Avoid talking about right side and left side - Don't ever concatenate translated strings - Don't translate date formats - Allow user to change country/language easily - Be mindful of colors - Useful-to-have-include the locale in the path
   - **Use:**
   - **Example:**
-  - **Source:**
+  - **Source:**<https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites>
 - [ ] What are `data-` attributes good for?
-  - **Explanation:**
-  - **Use:**
+  - **Explanation:** - Allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM
+  - **Use:** Any attribute on any element whose attribute name starts with data- is a data attribute. Say you have an article and you want to store some extra information that doesn't have any visual representation. Just use data attributes for that
   - **Example:**
-  - **Source:**
+    <article
+    id="electric-cars"
+    data-columns="3"
+    data-index-number="12314"
+    data-parent="cars">
+    …
+  </article>
+  - **Source:** <https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes>
 - [ ] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
   - **Explanation:**
   - **Use:**
