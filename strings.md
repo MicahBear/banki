@@ -164,6 +164,18 @@ groups
 
 The exact number of arguments depends on whether the first argument is a RegExp object — and, if so, how many capture groups it has.
 
+    -
+
+The JS String Replace method can take a function as it's second parameter, which will get passed matches in the input string. Each match gets passed into that inner function, and is replaced in the input string by whatever that inner function returns.
+
+In this case the pattern matches [A-Z] (all capital letters).
+
+So in the string "ThisIsAString" we will match "T", "I", "A", and "S"
+
+The inner function uses a ternary: offset > 0 ? '-' : '' (compact if/else) to prefix a dash if this match is not the first character. It could be reworded as: "if this match is not the first character, prefix with a dash. Otherwise, do not prefix anything."
+
+the last part: + match.toLowerCase() converts the matched character to lowercase, so now our matches will be replaced by: "t", "-i", "-a" and "-s"
+
 -Time Complexity: why?:
 
 -Example:
