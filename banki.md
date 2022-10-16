@@ -197,9 +197,19 @@ Most of the technical questions should have a three sentence response in the EUE
 
 - [ ] Describe the difference between `<script>, <script async> and <script defer>`.
   - **Explanation:**
+    - `<script>` HTML parsing is blocked, the script is fetch and executed immediately, HTML parsing resumes after the script is executed.
+    - `<script async>` The script will be fetch in parallel to HTML parsing and executed as soon as it is available (potentially before HTML parsing completes). Use async when the script is independent of any other scripts on the page, for example analytics.
+    - `<script defer>` The script will be fetched in parallel to HTML parsing and executed when the page has finished parsing. If there are multiple of them, each deffered script is executed in the order they were encountered in the document. If a script relies on a fully-parsed DOM, the defer attribute will be useful in ensuring the HTML is fully parsed before executing. A deferred script must not contain document.write.
   - **Use:**
+    - Async is more useful when you really don't care when the script loads and nothing else that is user dependent depends upon that script loading. The most often cited example for using async is an analytics script like Google Analytics that you don't want anything to wait for and it's not urgent to run soon and it stands alone so nothing else depends upon it.
+    - You could put the scripts in the `<head>` tag and set them to defer and the loading of the scripts will be deferred until the DOM has been parsed and that will get fast page display in new browsers that support defer, but it won't help you at all in older browsers and it isn't really any faster than just putting the scripts right before `</body>` which works in all browsers. So, you can see why it's just best to put them right before `</body>`.
   - **Example:**
+    `<script src="myscript.js"></script>`
+    `<script async src="myscript.js"></script>`
+    `<script defer src="myscript.js"></script>`
   - **Source:**
+    <https://stackoverflow.com/questions/10808109/script-tag-async-defer>
+    <https://bitsofco.de/async-vs-defer/>
 - [ ] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
   - **Explanation:**
   - **Use:**
