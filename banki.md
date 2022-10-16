@@ -218,9 +218,9 @@ Most of the technical questions should have a three sentence response in the EUE
     - Placing `<script>`s just before `</body>`
       `<script>` tags block HTML parsing while they are being downloaded and executed which can slow down your page. Placing the scripts at the bottom will allow the HTML to be parsed and displayed to the user first.
 
-    An exception for positioning of `<script>`s at the bottom is when your script contains document.write(), but these days it's not a good practice to use document.write(). Also, placing `<script>`s at the bottom means that the browser cannot start downloading the scripts until the entire document is parsed. This ensures your code that needs to manipulate DOM elements will not throw an error and halt the entire script. If you need to put `<script>`s in the `<head>`, use the defer attribute, which will achieve the same effect of running the script only after the HTML is parsed but the browser can download the script earlier.
+      An exception for positioning of `<script>`s at the bottom is when your script contains document.write(), but these days it's not a good practice to use document.write(). Also, placing `<script>`s at the bottom means that the browser cannot start downloading the scripts until the entire document is parsed. This ensures your code that needs to manipulate DOM elements will not throw an error and halt the entire script. If you need to put `<script>`s in the `<head>`, use the defer attribute, which will achieve the same effect of running the script only after the HTML is parsed but the browser can download the script earlier.
 
-    Keep in mind that putting scripts just before the closing `</body>`tag will create the illusion that the page loads faster on an empty cache (since the scripts won't block downloading the rest of the document). However, if you have some code you want to run during page load, it will only start executing after the entire page has loaded. If you put those scripts in the `<head>` tag, they would start executing before - so on a primed cache the page would actually appear to load faster.
+      Keep in mind that putting scripts just before the closing `</body>`tag will create the illusion that the page loads faster on an empty cache (since the scripts won't block downloading the rest of the document). However, if you have some code you want to run during page load, it will only start executing after the entire page has loaded. If you put those scripts in the `<head>` tag, they would start executing before - so on a primed cache the page would actually appear to load faster.
 
     - `<head>` and `<body>` tags are now optional
 
@@ -234,10 +234,22 @@ Most of the technical questions should have a three sentence response in the EUE
     <https://developers.google.com/web/fundamentals/performance/critical-rendering-path/>
 
 - [ ] What is progressive rendering?
+
   - **Explanation:**
+
+    - Progressive rendering is the name given to techniques used to improve the performance of a webpage (in particular, improve perceived load time) to render content for display as quickly as possible.
+
+    It used to be much more prevalent in the days before broadband internet but it is still used in modern development as mobile data connections are becoming increasingly popular (and unreliable)!
+
   - **Use:**
   - **Example:**
+    - Lazy loading of images - Images on the page are not loaded all at once. JavaScript will be used to load an image when the user scrolls into the part of the page that displays the image.
+    - Prioritizing visible content (or above-the-fold rendering) - Include only the minimum CSS/content/scripts necessary for the amount of page that would be rendered in the users browser first to display as quickly as possible, you can then use deferred scripts or listen for the DOMContentLoaded/load event to load in other resources and content.
+    - Async HTML fragments - Flushing parts of the HTML to the browser as the page is constructed on the back end. More details on the technique can be found here.
   - **Source:**
+    <https://stackoverflow.com/questions/33651166/what-is-progressive-rendering>
+    <http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/>
+
 - [ ] Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
   - **Explanation:**
   - **Use:**
