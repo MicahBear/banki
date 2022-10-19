@@ -51,3 +51,22 @@ assert.strictEqual(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41);
 
  reduce the array adding each value to get a sum and make sure the current value is treated as a Number by using Number() 
  */
+//
+function sumMix(arr) {
+    //arr.reduce to a sum
+    // the 0 will set the type to a number
+    // will need to makesure each current value is a number.
+    return arr.reduce((a, c) => { a + Number(c), 0 })
+    // is there anything you see here I missed or didnt consider.
+}
+
+
+//  It's the academic year's end, fateful moment of your school report.The averages must be calculated.All the students come to you and entreat you to calculate their average for them.Easy! You just need to write a script.
+
+// Return the average of the given array rounded down to its nearest integer.
+
+// The array will never be empty.
+
+//     getAverage([2, 2, 2, 2]), 2);
+// getAverage([1, 2, 3, 4, 5,]), 3);
+// getAverage([1, 1, 1, 1, 1, 1, 1, 2]), 1);
