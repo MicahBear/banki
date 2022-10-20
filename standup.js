@@ -75,3 +75,14 @@ function sumMix(arr) {
 function getAverage(arr) {
     return Math.Floor(arr.reduce((a, c) => { a + c, 0 }) / arr.length)
 }
+
+// find the numbers that only appear once and sum them
+// brute force might be loop thru check for repeat push to array then sum that array
+function repeats(arr) {
+    // arr -> filter single values -> reduce
+    // index of num is last index of num
+    return arr.filter(n => arr.indexOf(n) === arr.lastIndexOf(n).reduce((a, c) => { a + c, 0 }))
+}
+
+console.log(repeats([4, 5, 7, 5, 4, 8]), 15)
+console.log(repeats([9, 10, 19, 13, 19, 13]), 19)
