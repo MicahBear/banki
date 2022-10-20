@@ -70,3 +70,8 @@ function sumMix(arr) {
 //     getAverage([2, 2, 2, 2]), 2);
 // getAverage([1, 2, 3, 4, 5,]), 3);
 // getAverage([1, 1, 1, 1, 1, 1, 1, 2]), 1);
+// Reduce the sum and divide by the length to get the average and then round down
+
+function getAverage(arr) {
+    return Math.Floor(arr.reduce((a, c) => { a + c, 0 }) / arr.length)
+}
