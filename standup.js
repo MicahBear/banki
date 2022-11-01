@@ -103,11 +103,16 @@ function evenNumbers(array, number) {
 }
 
 
-function transformStr(str) {
-    //split str " " -> reverse -> join
-    // split str""-> map char === char.toUpperCase()?char.toLowerCase():char.toUpperCase
-    //yes you can chain all these.. but to start we can seperate out.
-    let reversedStr = str.split(' ').reverse().join(' ')
-    let transformedStr = reversedStr.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('')
-    return transformedStr
-}
+// function transformStr(str) {
+//split str " " -> reverse -> join
+// split str""-> map char === char.toUpperCase()?char.toLowerCase():char.toUpperCase
+//yes you can chain all these.. but to start we can seperate out.
+// let reversedStr = str.split(' ').reverse().join(' ')
+// let transformedStr = reversedStr.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('')
+// return transformedStr
+
+// one string
+const transformStr = str => str.split(' ').reverse().join(' ').split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('')
+// }
+
+
