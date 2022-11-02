@@ -116,3 +116,32 @@ const transformStr = str => str.split(' ').reverse().join(' ').split('').map(cha
 // }
 
 
+
+
+function deleteNth(arr, allowed) {
+    let count = {}
+
+    return arr.filter((element) => {
+        count[element] = count[element] ? count[element] + 1 : 1
+
+        console.log(count[element], 'check')
+
+        return count[element] <= allowed
+    })
+}
+
+
+function deleteNth(arr, n) {
+
+    const res = [];
+    const countNums = {};
+
+    arr.forEach((el, idx) => {
+        countNums[el] = countNums[el] ? countNums[el] + 1 : 1;
+        if (countNums[el] <= n) {
+            res.push(el);
+        }
+    })
+
+    return res;
+}
