@@ -61,6 +61,7 @@ function sumMix(arr) {
 }
 
 
+
 //  It's the academic year's end, fateful moment of your school report.The averages must be calculated.All the students come to you and entreat you to calculate their average for them.Easy! You just need to write a script.
 
 // Return the average of the given array rounded down to its nearest integer.
@@ -145,3 +146,28 @@ function deleteNth(arr, n) {
 
     return res;
 }
+
+//Implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+//         arrayDiff([1, 2], [1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+//     arrayDiff([1, 2, 2, 2, 3], [2]) == [1, 3]
+
+//     arrayDiff([], [4, 5]), [], "a was [], b was [4,5]"
+
+//     arrayDiff([3, 4], [3]), [4], "a was [3,4], b was [3]"
+
+//     arrayDiff([1, 8, 2], []), [1, 8, 2], "a was [1,8,2], b was []"
+
+function arrayDiff(a, b) {
+    // if(a.length===0||b.length === 0){return a}
+    // set is kind of like an array
+    let newSet = new Set(b) // means no duplicate - linear complexity
+    // means filter all the values that do not appear in this set.
+    return a.filter(n => !newSet.has(n))
+}
+//set is linear, .has is constant?
+// contains() for strings,  includes () for arrays, has() for objects is property for your set.
