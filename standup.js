@@ -227,3 +227,6 @@ function sortArray(array) {
     const odd = array.filter((x) => x % 2).sort((a, b) => a - b);
     return array.map((x) => x % 2 ? odd.shift() : x);
 }
+
+// Your task is to remove all consecutive duplicate words from a string, leaving only first words entries.For example:
+const removeConsecutiveDuplicates = s => s.split(' ').filter((e, ind, arr) => e !== arr[ind - 1]).join(' ')
