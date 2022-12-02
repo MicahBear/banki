@@ -230,3 +230,20 @@ function sortArray(array) {
 
 // Your task is to remove all consecutive duplicate words from a string, leaving only first words entries.For example:
 const removeConsecutiveDuplicates = s => s.split(' ').filter((e, ind, arr) => e !== arr[ind - 1]).join(' ')
+
+
+// if there is duplicates return true
+const containsDuplicate = function (nums) {
+    let numsMap = {}
+    for (let i = 0; i < nums.length; i++) {
+        let num = nums[i];
+
+        if (numsMap[num]) {
+            return true
+        } else {
+            numsMap[num] = true
+        }
+    }
+    return false
+
+};
