@@ -247,3 +247,38 @@ const containsDuplicate = function (nums) {
     return false
 
 };
+
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times.You may assume that the majority element always exists in the array.
+
+//     Example 1:
+
+// Input: nums = [3, 2, 3]
+// Output: 3
+// Example 2:
+
+// Input: nums = [2, 2, 1, 1, 1, 2, 2]
+// Output: 2
+function majority(arr) {
+    let map = {},
+        // {"key":value}
+        maxCount = 0,
+        maxElement = null
+
+
+    for (const num of arr) {
+        map[num] = map[num] + 1 || 1
+    }
+
+    for (const num in map) {
+        console.log(map[num], 'a') //<--- frequency (value)
+        console.log(num, 'b') //<--- key
+        if (map[num] > maxCount) {
+            maxCount = map[num]
+            maxElement = num
+        }
+    }
+    return maxElement
+
+}
