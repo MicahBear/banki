@@ -310,3 +310,24 @@ function majority(arr) {// logarithmic solution
     arr.sort()
     return arr[Math.floor(arr.length / 2)] // he sorted the array and grabbed the array and divided and pulled out the middle element. be
 }
+
+
+// my attempt at ransome note algo.
+
+function ransom(note, magazine) {
+
+    let magArr = magazine.split(' ');
+    let magObject = {}
+    for (const word of magArr) {
+        magObject[word] = magObject + 1 || 0
+    }
+    let noteArr = note.split(' ');
+    for (const word of noteArr) {
+        if (magObject[word]) {
+            magObject--;
+            if (magObject < 0) { return false }
+        }
+    }
+    return true
+
+}
