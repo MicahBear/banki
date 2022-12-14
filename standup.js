@@ -282,3 +282,31 @@ function majority(arr) {
     return maxElement
 
 }
+
+
+// leons solution
+// we can actually get rid of the second for loop.. we can get rid of the count
+function majority(arr) {
+    let elem = {},
+        count = 0,
+        majElem = arr[0]
+
+    for (const num of arr) {// linear solution
+        elem[num] = elem[num] + 1 || 1
+        elem[num] > arr.length / 2 //this will give us which is giving up more than half the array
+    }
+    // for( const n in elem){
+    //     if(elem[n>count]){
+    //         count =elem[n]
+    //         majElem = n
+    //     }
+    // }
+
+    return majElm
+}
+
+//leons solution with sort
+function majority(arr) {// logarithmic solution
+    arr.sort()
+    return arr[Math.floor(arr.length / 2)] // he sorted the array and grabbed the array and divided and pulled out the middle element. be
+}
