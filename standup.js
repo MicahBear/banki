@@ -331,3 +331,31 @@ function ransom(note, magazine) {
     return true
 
 }
+
+
+//LN solution.
+function ransomNote(note, magazine) {
+    const noteWords = note.split(' ');
+    const magazineWords = magazine.split(' ');
+    const magMap = {}
+
+    let possible = true
+
+    // hash map of all the words in magazine and how many times they show up
+    for (const word of magazinWords) {
+        magMap[word] = magMap[word] + 1 || 1
+    }
+
+    // loop through words in note
+    for (const word of noteWords) {
+        // we are now going to check if those words are in the magazine hash map.
+        if (magMap[word]) {
+            magMap[word]--
+            if (magMap[word] < 0) return false
+        } else {
+            possible = false
+        }
+    }
+    return possible
+
+}
