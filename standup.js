@@ -383,3 +383,31 @@ function ransomNote(note, magazine) {
 //         assert.equal(ransomNote("sit ad est sint in in in in", magazine), false);
 //     });
 // });
+
+
+
+// Given an array of numbers, return all pairs that add up to a given sum.The numbers can be used more than once.
+
+//     describe("Two Sum", () => {
+//         it("Should implement two sum", () => {
+//             assert.deepEqual(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]]);
+//         });
+//     });
+
+function twoSum(arr, sum) {
+    const pairs = []
+    // going to put each number into a hash map..
+    const nums = {}
+
+    for (num1 of arr) {
+        const num2 = sum - num1
+        // if the counter part is in our object.. push to pairs
+        if (nums[num2]) {
+            pairs.push([num1, num2])
+        } else {
+            // if it is not in the object add to object
+            nums[num1] = 1
+        }
+    }
+    return pairs
+}
