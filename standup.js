@@ -342,7 +342,7 @@ function ransomNote(note, magazine) {
     let possible = true
 
     // hash map of all the words in magazine and how many times they show up
-    for (const word of magazinWords) {
+    for (const word of magazineWords) {
         magMap[word] = magMap[word] + 1 || 1
     }
 
