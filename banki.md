@@ -447,24 +447,23 @@ Most of the technical questions should have a three sentence response in the EUE
     Adding event delegation to prevent redundancy and create effiency.
   - **Example:**
 
-````javascript
-    const customUI = document.createElement('ul');
+```javascript
+const customUI = document.createElement("ul");
 
 function responding(evt) {
-if (evt.target.nodeName === 'li')
-console.log('Responding')
+  if (evt.target.nodeName === "li") console.log("Responding");
 }
 for (var i = 1; i <= 10; i++) {
-const newElement = document.createElement('li');
-newElement.textContent = "This is line " + i;
-customUI.appendChild(newElement);
+  const newElement = document.createElement("li");
+  newElement.textContent = "This is line " + i;
+  customUI.appendChild(newElement);
 }
-customUI.addEventListener('click', responding);
+customUI.addEventListener("click", responding);
 ```
 
 - **Source:**
-  <https://www.freecodecamp.org/news/event-delegation-javascript/>
-  <https://www.geeksforgeeks.org/event-delegation-in-javascript/>
+  <https://www.freecodecamp.org/news/event-delegation-javascript>
+  <https://www.geeksforgeeks.org/event-delegation-in-javascript>
 - [ ] Explain how `this` works in JavaScript
   - **Explanation:**
   - **Use:**
@@ -1056,4 +1055,7 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
-````
+
+```
+
+```
