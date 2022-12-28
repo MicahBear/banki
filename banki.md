@@ -442,9 +442,31 @@ Most of the technical questions should have a three sentence response in the EUE
 
 - [ ] Explain event delegation
   - **Explanation:**
+    Event Delegation is a pattern based upon the concept of Event Bubbling. It is an event-handling pattern that allows you to handle events at a higher level in the DOM tree other than the level where the event was first received. Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the .target property of the event object.
   - **Use:**
+    Adding event delegation to prevent redundancy and create effiency.
   - **Example:**
-  - **Source:**
+
+````javascript
+<script>
+    const customUI = document.createElement('ul');
+
+function responding(evt) {
+if (evt.target.nodeName === 'li')
+console.log('Responding')
+}
+
+for (var i = 1; i <= 10; i++) {
+const newElement = document.createElement('li');
+newElement.textContent = "This is line " + i;
+customUI.appendChild(newElement);
+}
+
+customUI.addEventListener('click', responding);
+</script>```
+- **Source:**
+  <https://www.freecodecamp.org/news/event-delegation-javascript/>
+  <https://www.geeksforgeeks.org/event-delegation-in-javascript/>
 - [ ] Explain how `this` works in JavaScript
   - **Explanation:**
   - **Use:**
@@ -1036,3 +1058,4 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+````
