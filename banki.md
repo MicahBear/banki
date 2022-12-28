@@ -448,22 +448,20 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
 
 ````javascript
-<script>
     const customUI = document.createElement('ul');
 
 function responding(evt) {
 if (evt.target.nodeName === 'li')
 console.log('Responding')
 }
-
 for (var i = 1; i <= 10; i++) {
 const newElement = document.createElement('li');
 newElement.textContent = "This is line " + i;
 customUI.appendChild(newElement);
 }
-
 customUI.addEventListener('click', responding);
-</script>```
+```
+
 - **Source:**
   <https://www.freecodecamp.org/news/event-delegation-javascript/>
   <https://www.geeksforgeeks.org/event-delegation-in-javascript/>
