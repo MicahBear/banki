@@ -411,3 +411,22 @@ function twoSum(arr, sum) {
     }
     return pairs
 }
+
+//twoSum but return the indexes not just the pair 
+function twoSum(nums, target) {
+    let numObj = {};
+    for (let i = 0; i < nums.length; i++) {
+        console.log(i, 'index and loop')
+        console.log(nums[i], 'accessing the array')
+        let num2 = target - nums[i];
+        console.log(num2, 'result of subtraction- looking for other target')
+        if (numObj[num2] !== undefined) {
+            console.log([numObj[num2], i], 'code block after truthy if statment')
+            return [numObj[num2], i];
+        }
+        console.log(numObj[nums[i]] = i, 'else');
+        console.log(numObj, 'checking count in object')
+    }
+}
+
+console.log(twoSum([1, 5, 2, 7, 3], 9), [2, 3])
