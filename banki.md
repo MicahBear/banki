@@ -855,6 +855,9 @@ console.log(displayName());
 
 - [ ] Can you name two programming paradigms important for JavaScript app developers?
 - **Explanation:**
+  JavaScript is a multi language paradigm. There are two that come to my mind immediately; OOP-object oriented programming and FP - functioncal programming.
+  OOP- allows prototypal inheritance.
+  Functional is pure-functions.
 - **Use:**
 - **Example:**
 - **Source:**
