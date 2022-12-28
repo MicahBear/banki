@@ -466,9 +466,26 @@ customUI.addEventListener("click", responding);
   <https://www.geeksforgeeks.org/event-delegation-in-javascript>
 - [ ] Explain how `this` works in JavaScript
   - **Explanation:**
+    The value of this is defined at run-time.
+    When a function is declared, it may use this, but that this has no value until the function is called.
+    A function can be copied between objects.
+    When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
   - **Use:**
+    To access the object, a method can use the this keyword.
   - **Example:**
+
+```javascript
+    let user = {
+  name: "John",
+  age: 30,
+  sayHi() {
+    // "this" is the "current object"
+    alert(this.name);
+  }
+};
+user.sayHi(); // John`
   - **Source:**
+  <https://javascript.info/object-methods>
 - [ ] Explain how prototypal inheritance works
   - **Explanation:**
   - **Use:**
@@ -1055,6 +1072,8 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+
+```
 
 ```
 
