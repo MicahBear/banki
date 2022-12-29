@@ -605,9 +605,26 @@ const doubled = a.map((num) => {
   <https://www.frontendinterviewhandbook.com/javascript-questions>
 - [ ] What's a typical use case for anonymous functions?
 - **Explanation:**
+  I would say that the most typical use for anonymous functions in JS is to pass them as arguments to other functions
 - **Use:**
+  An anonymous function is a function that does not have any name associated with it. Normally we use the function keyword before the function name to define a function in JavaScript, however, in anonymous functions in JavaScript, we use only the function keyword without the function name. An anonymous function is not accessible after its initial creation, it can only be accessed by a variable it is stored in as a function as a value. An anonymous function can also have multiple arguments, but only one expression.
 - **Example:**
+
+```javascript
+let display = function () {
+  return "GeeksforGeeks...!";
+};
+console.log(display());
+
+// Using arrow function
+let displayName = () => {
+  return "GeeksforGeeks....!";
+};
+console.log(displayName());
+```
+
 - **Source:**
+  <https://www.geeksforgeeks.org/what-is-a-typical-use-case-for-anonymous-functions-in-javascript>
 - [ ] How do you organize your code? (module pattern, classical inheritance?)
 - **Explanation:**
 - **Use:**
