@@ -539,9 +539,11 @@ RequireJS is an implementation of AMD, while at the same time trying to keep the
   <https://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs>
 - [ ] Explain why the following doesn't work as an IIFE: `function foo(){ }();`. What needs to be changed to properly make it an IIFE?
 - **Explanation:**
+  The parser reads it as two seperate statements. First the function declaration function foo(){ } and then a blank function call attempt (); The best way to fix this would be to add another set of parenthesis wrapping the function declaration (function foo(){ })() This changes it from a function declaration to a function expression.
 - **Use:**
 - **Example:**
 - **Source:**
+  <https://www.frontendinterviewhandbook.com/javascript-questions>
 - [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
 - **Explanation:**
 - **Use:**
