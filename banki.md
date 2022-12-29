@@ -536,6 +536,7 @@ RequireJS is an implementation of AMD, while at the same time trying to keep the
 
 - **Source:**
   <https://rlynjb.medium.com/js-interview-question-what-do-you-think-of-amd-vs-commonjs-71defa831c50>
+  <https://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs>
 - [ ] Explain why the following doesn't work as an IIFE: `function foo(){ }();`. What needs to be changed to properly make it an IIFE?
 - **Explanation:**
 - **Use:**
