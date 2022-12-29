@@ -475,25 +475,34 @@ customUI.addEventListener("click", responding);
   - **Example:**
 
 ```javascript
-    let user = {
+let user = {
   name: "John",
   age: 30,
   sayHi() {
     // "this" is the "current object"
     alert(this.name);
-  }
+  },
 };
 user.sayHi(); // John`
-  - **Source:**
+```
+
+- **Source:**
   <https://javascript.info/object-methods>
 - [ ] Explain how prototypal inheritance works
+
   - **Explanation:**
- Prototypical inheritance refers to the ability to access object properties from another object.
- After the ES6 updates, JavaScript allowed for “prototypal inheritance”, meaning that objects and methods can be shared, extended, and copied.
+    Prototypical inheritance refers to the ability to access object properties from another object.
+    After the ES6 updates, JavaScript allowed for “prototypal inheritance”, meaning that objects and methods can be shared, extended, and copied.
   - **Use:**
-  Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function.
+    Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function.
   - **Example:**
-  - **Source:**
+
+  ```javascript
+  //using __proto__ to access and set the [[Prototype]] of "anObject"
+  anObject.__proto__ = someotherObject;
+  ```
+
+- **Source:**
 - [ ] What do you think of AMD vs CommonJS?
   - **Explanation:**
   - **Use:**
@@ -1075,6 +1084,12 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+
+```
+
+```
+
+```
 
 ```
 
