@@ -578,9 +578,31 @@ init();
   <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures>
 - [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
 - **Explanation:**
+  .forEach() executes a callback function on each element, but does not return a value. .map() executes a callback function on each element and "maps" the result to a new array. The new array is returned.
 - **Use:**
+  If you need the result and don't want to mutate the original array, use map. If you only need to iterate over the array then forEach can be used.
 - **Example:**
+
+```javascript
+const a = [1, 2, 3];
+const doubled = a.forEach((num, index) => {
+  // Do something with num and/or index.
+});
+// doubled = undefined
+```
+
+.map()
+
+```javascript
+const a = [1, 2, 3];
+const doubled = a.map((num) => {
+  return num * 2;
+});
+// doubled = [2, 4, 6]
+```
+
 - **Source:**
+  <https://www.frontendinterviewhandbook.com/javascript-questions>
 - [ ] What's a typical use case for anonymous functions?
 - **Explanation:**
 - **Use:**
