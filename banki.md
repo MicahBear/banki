@@ -861,6 +861,7 @@ console.log(displayName());
 - **Use:**
 - **Example:**
 - **Source:**
+  <https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95>
 - [ ] What is functional programming?
 - **Explanation:**
 - **Use:**
