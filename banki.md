@@ -506,543 +506,570 @@ user.sayHi(); // John`
   <https://www.educative.io/blog/understanding-and-using-prototypal-inheritance-in-javascript>
 - [ ] What do you think of AMD vs CommonJS?
   - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+    AMD and CommonJS are both Javascript module loader. They accomplish the same task but works different. (Asynchronous Module Definition) is another specification for modules. RequireJS is probably the most popular implementation of AMD.
+
+AMD is better for browser, hence, the name ‘Asynchronous’, as it loads each distinct module in async manner instead of loading in one large file. No extra steps are required to use AMD, it works out-of-the-box.
+
+While, CommonJS, is a standard, mostly used in servers and it loads modules synchronously, though extra step is required if you want your JS file size to be minified and compressed.
+
+why do we need to use javascript module loader?: JS module loader mitigates away the danger of global-namespace issue.
+
+- **Use:**
+  So, CommonJS and AMD are JavaScript module definition APIs that have different implementations, but both come from the same origins.
+
+AMD is more suited for the browser, because it supports asynchronous loading of module dependencies.
+RequireJS is an implementation of AMD, while at the same time trying to keep the spirit of CommonJS (mainly in the module identifiers).
+
+- **Example:**
+
+  ```javascript
+  // someModule.js
+  exports.doSomething = function () {
+    return "foo";
+  };
+  //otherModule.js
+  var someModule = require("someModule"); // in the vein of node
+  exports.doSomethingElse = function () {
+    return someModule.doSomething() + "bar";
+  };
+  ```
+
+- **Source:**
+  <https://rlynjb.medium.com/js-interview-question-what-do-you-think-of-amd-vs-commonjs-71defa831c50>
 - [ ] Explain why the following doesn't work as an IIFE: `function foo(){ }();`. What needs to be changed to properly make it an IIFE?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a closure, and how/why would you use one?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's a typical use case for anonymous functions?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How do you organize your code? (module pattern, classical inheritance?)
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's the difference between host objects and native objects?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's the difference between `.call()` and `.apply()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain `Function.prototype.bind`.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] When would you use `document.write()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's the difference between feature detection, feature inference, and using the UA string?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain Ajax in as much detail as possible.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the advantages and disadvantages of using Ajax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain how JSONP works (and how it's not really Ajax).
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Have you ever used JavaScript templating? If so, what libraries have you used?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain "hoisting".
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Describe event bubbling.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What's the difference between an "attribute" and a "property"?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why is extending built-in JavaScript objects not a good idea?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Difference between document `load` event and document `DOMContentLoaded` event?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between `==` and `===`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the same-origin policy with regards to JavaScript.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Make this work: `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]`
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why is it called a ternary expression, what does the word "ternary" indicate?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is "use strict";? what are the advantages and disadvantages to using it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain what a single page app is and how to make one SEO-friendly.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the extent of your experience with Promises and/or their polyfills?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the pros and cons of using Promises instead of callbacks?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What tools and techniques do you use debugging JavaScript code?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What language constructions do you use for iterating over object properties and array items?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the difference between mutable and immutable objects.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the difference between synchronous and asynchronous functions.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is event loop? What is the difference between call stack and task queue?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the differences on the usage of foo between `function foo() {}` and `var foo = function() {}`
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the differences between variables created using `let`, `var` or `const`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the differences between ES6 class and ES5 function constructors?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Can you offer a use case for the new arrow => function syntax? How does this new syntax differ from other functions?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What advantage is there for using the arrow syntax for a method in a constructor?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the definition of a higher-order function?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Can you give an example for destructuring an object or an array?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Can you give an example of a curry function and why this syntax offers an advantage?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the benefits of using spread syntax and how is it different from rest syntax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How can you share code between files?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why you might want to create static class members?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 
 ### Javascript General
 
 - [ ] Can you name two programming paradigms important for JavaScript app developers?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is functional programming?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between classical inheritance and prototypal inheritance?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the pros and cons of functional programming vs object-oriented programming?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are two-way data binding and one-way data flow, and how are they different?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is asynchronous programming, and why is it important in JavaScript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 
 ### Node
 
 - [ ] What is Node.js? Where can you use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why use Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the features of Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How do you update NPM to a new version in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Why is Node.js Single-threaded?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain callback in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is callback hell in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How do you prevent/fix callback hell?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the role of REPL in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Name the types of API functions in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the functionalities of NPM in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between Node.js and Ajax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain chaining in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are Globals in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Event-driven programming?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Event loop in Node.js work? And How does it work?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the purpose of `module.exports` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between Asynchronous and Non-blocking?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Tracing in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How will you debug an application in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Difference between `setImmediate()` and `setTimeout()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is `process.nextTick()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is package.json? What is it used for?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is libuv?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are some of the most popular modules of Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is `EventEmitter` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 
 ### CS Theory
 
 - [ ] What is recursion and give an example using javascript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are types?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are data structures?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is an algorithm?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is scope / lexical scope in javascript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is polymorphism?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is encapsulation?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Linked List?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Doubly Linked List?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Queue?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Stack?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Hash Table?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Heap?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Trie?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Tree?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Binary Search Tree?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Disjoint Set?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is a Bloom Filter?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Demonstrate Bubble Sort and explain when you might use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Demonstrate Insertion Sort and explain when you might use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Demonstrate Merge Sort and explain when you might use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Demonstrate Quicksort and explain when you might use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 
 ## Questions to ask your interviewer
 
@@ -1061,21 +1088,21 @@ Here is a helpful list of other reverse interview questions: [https://github.com
 When talking through a whiteboard problem or a coding challenge with an interviewer you should use the PREP method. (Don't write PREP in the actual interview, but use it now while doing codewars/leetcode). Going through this will help you engage with the interviewer (and possibly burn up some time 😉)
 
 - **Parameters**
-  - Inputs
-  - Ask questions
-    - Will it always be a number?
-    - Will it ever be negative?
-    - Any gotchas?
+- Inputs
+- Ask questions
+  - Will it always be a number?
+  - Will it ever be negative?
+  - Any gotchas?
 - **Returns**
-  - Ask questions
-    - Do you want it returned or is a console.log better?
-    - Should I pass a whole array of solutions back or just a single solution?
+- Ask questions
+  - Do you want it returned or is a console.log better?
+  - Should I pass a whole array of solutions back or just a single solution?
 - **Examples**
-  - Show a couple black box examples, aka test cases
-    - I pass in these arguments and get these results, is that correct?
-  - Examples are a good idea because "you have the receipts" if the interviewer decides to change things.
+- Show a couple black box examples, aka test cases
+  - I pass in these arguments and get these results, is that correct?
+- Examples are a good idea because "you have the receipts" if the interviewer decides to change things.
 - **Pseudocode**
-  - Write pseudocode of each of the steps
+- Write pseudocode of each of the steps
 
 ## Resources
 
@@ -1085,6 +1112,10 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+
+```
+
+```
 
 ```
 
