@@ -503,6 +503,7 @@ user.sayHi(); // John`
   ```
 
 - **Source:**
+  <https://www.educative.io/blog/understanding-and-using-prototypal-inheritance-in-javascript>
 - [ ] What do you think of AMD vs CommonJS?
   - **Explanation:**
   - **Use:**
