@@ -546,14 +546,36 @@ RequireJS is an implementation of AMD, while at the same time trying to keep the
   <https://www.frontendinterviewhandbook.com/javascript-questions>
 - [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
 - **Explanation:**
+  null: the value is intentionally absent (points to nothing in memory).
+  undefined: not yet assigned a value or not yet declared.
+  undeclared: improperly declared without let/const/var
 - **Use:**
+  null can be used to assign the primitive value of null to a variable. undeclared throws an error where as null and undefined can be checked with a conditional
 - **Example:**
+  null and undefined can be checked using strict equality ===. Undeclared will throw it's own error so you could use try...catch
 - **Source:**
+  <https://www.30secondsofcode.org/articles/s/javascript-undeclared-undefined-null>
 - [ ] What is a closure, and how/why would you use one?
 - **Explanation:**
+  Closure allows you to use an outer function’s scope (go into a parent, grandparent function, etc.) from within an inner function. In JavaScript a closure is created every time a function is created.
 - **Use:**
+  It allows you to combine data with the function that will operate on that data. It is similar to OOP. Reuseable dynamic function.
 - **Example:**
+
+```javascript
+function init() {
+  var name = "Mozilla"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+```
+
 - **Source:**
+  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures>
 - [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
 - **Explanation:**
 - **Use:**
@@ -1115,6 +1137,10 @@ When talking through a whiteboard problem or a coding challenge with an intervie
 - [https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 - [https://www.simplilearn.com/node-js-interview-questions-and-answers-article](https://www.simplilearn.com/node-js-interview-questions-and-answers-article)
 - [https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+
+```
+
+```
 
 ```
 
