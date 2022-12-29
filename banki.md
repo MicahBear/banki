@@ -488,7 +488,10 @@ user.sayHi(); // John`
   <https://javascript.info/object-methods>
 - [ ] Explain how prototypal inheritance works
   - **Explanation:**
+ Prototypical inheritance refers to the ability to access object properties from another object.
+ After the ES6 updates, JavaScript allowed for “prototypal inheritance”, meaning that objects and methods can be shared, extended, and copied.
   - **Use:**
+  Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function.
   - **Example:**
   - **Source:**
 - [ ] What do you think of AMD vs CommonJS?
