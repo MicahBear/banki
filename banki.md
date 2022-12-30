@@ -864,8 +864,11 @@ console.log(displayName());
   <https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95>
 - [ ] What is functional programming?
 - **Explanation:**
+  pure functions that avoid shared state and mutable data. You avoid side-effects.
 - **Use:**
+  some features that support functional programming : higher order functions, functions as arguments/values.
 - **Example:**
+  Instead of function with two parameters that do two tasks. break that function into two functions.
 - **Source:**
 - [ ] What is the difference between classical inheritance and prototypal inheritance?
 - **Explanation:**
