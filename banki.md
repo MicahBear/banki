@@ -872,7 +872,13 @@ console.log(displayName());
 - **Source:**
 - [ ] What is the difference between classical inheritance and prototypal inheritance?
 - **Explanation:**
+  Classical instances inherit from class "templates" and create sub-class relationships. Hierachical class taxonomies. They are typically instantiated via constructor functions or the class keyword.
+  Prototypal instances inherit directly from other objects and typically instantiated via factory functions or the Object.create() method. Intances can be composed from many different objects, allowing for easy selective inheritance
 - **Use:**
+  It is usually considered better practice use Prototypal inheritance:
+  Protoypes are more flexible than classes
+  The abstraction is only a single level deep
+  It's less verbose than using classical inheritance
 - **Example:**
 - **Source:**
 - [ ] What are the pros and cons of functional programming vs object-oriented programming?
