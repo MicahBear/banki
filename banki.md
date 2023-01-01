@@ -883,6 +883,11 @@ console.log(displayName());
 - **Source:**
 - [ ] What are the pros and cons of functional programming vs object-oriented programming?
 - **Explanation:**
+  OOP pros: tends to use more of imperative style rather than dleclarative style. It is easy to understand the basic conept of objects and meaning of method calls.
+  OOP cons: depends on a shared state. objects and behaviors are tacked together on the same entity. Because of that it can lead to any number of functions accessing it in a non-deteministic order.
+  FP pros: avoid shared state and side effects. eliminates bugs caused by multiple functions that are competeing for the same resources. functions are radically simplified and more resuable compared to OOP.
+  more declartive.. more of what to do not how to do. this allows for refactoring and optimization.
+  FP cons: more people are familiar with OO and imparative programming than functional programming. so it can be confusing to new team members. Meaning FP concepts are written in idioms and notations from lambda calculus, algebras and category theory.
 - **Use:**
 - **Example:**
 - **Source:**
