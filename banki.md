@@ -893,7 +893,10 @@ console.log(displayName());
 - **Source:**
 - [ ] What are two-way data binding and one-way data flow, and how are they different?
 - **Explanation:**
+  Two-way data: UI fields are bound to model data dynamically. When a UI field changes, the model data changes with it and vice-versa. Side effects can occur.
+  One-way data: The model is the single source of truth. Changes in the UI signal user intent to the model (or “store” in React). Only the model has the access to change the app’s state. The effect is that data always flows in a single direction. It is deterministic meaning no side effects will occur.
 - **Use:**
+  React is a popular framework which uses one-way data flow. Angular on the other hand uses two-way data binding.
 - **Example:**
 - **Source:**
 - [ ] What is asynchronous programming, and why is it important in JavaScript?
