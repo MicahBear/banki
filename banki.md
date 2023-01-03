@@ -901,6 +901,7 @@ console.log(displayName());
 - **Source:**
 - [ ] What is asynchronous programming, and why is it important in JavaScript?
 - **Explanation:**
+  asynchronous programming is the engin running an event loop. It allows you to run blocking code outside of the single thread so that the program can continue to run while it waits for the blocking code to complete. Javascript is synchronous by nature, but the runtime (browser or node) has an event loop which allows developers to write asynchronous programs.
 - **Use:**
 - **Example:**
 - **Source:**
