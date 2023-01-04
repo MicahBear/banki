@@ -462,6 +462,7 @@ customUI.addEventListener("click", responding);
 ```
 
 - **Source:**
+  <https://javascript.info/event-delegation>
   <https://www.freecodecamp.org/news/event-delegation-javascript>
   <https://www.geeksforgeeks.org/event-delegation-in-javascript>
 - [ ] Explain how `this` works in JavaScript
