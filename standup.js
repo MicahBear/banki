@@ -430,3 +430,10 @@ function twoSum(nums, target) {
 }
 
 console.log(twoSum([1, 5, 2, 7, 3], 9), [2, 3])
+
+// two things thinking about when thinking recursiion..
+// base case and recursive function
+function fib(num) {
+    if (n < 2) { return num }
+    return fib(num - 1) + fib(num - 2)
+}
