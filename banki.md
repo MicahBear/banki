@@ -558,8 +558,12 @@ RequireJS is an implementation of AMD, while at the same time trying to keep the
   <https://www.30secondsofcode.org/articles/s/javascript-undeclared-undefined-null>
 - [ ] What is a closure, and how/why would you use one?
 - **Explanation:**
+  A closure is a function and its lexical environment.
   Closure allows you to use an outer function’s scope (go into a parent, grandparent function, etc.) from within an inner function. In JavaScript a closure is created every time a function is created.
 - **Use:**
+  Data encapsulation. - prevent leaking or exposing data where its not needed. Create stateful functions.
+  Object data privacy.
+  Can use closures to create a function factory.
   It allows you to combine data with the function that will operate on that data. It is similar to OOP. Reuseable dynamic function.
 - **Example:**
 
