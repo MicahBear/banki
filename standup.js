@@ -437,3 +437,31 @@ function fib(num) {
     if (n < 2) { return num }
     return fib(num - 1) + fib(num - 2)
 }
+
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+function findOdd(A) {
+    if (A.length === 1) {
+        return A[0]
+    }
+    let count = {}
+    //loop through array
+    //count each number. if that number exsists +1, if not set = 1
+    for (const c of A) {
+        if (count[c]) {
+            count[c]++
+        } else {
+            count[c] = 1
+        }
+    }
+    console.log(count.length, 'length')
+    console.log(count, 'result')
+
+    for (odd in count) {
+        if (count[odd] % 2 != 0) {
+            console.log(odd, 'odd test')
+            return odd
+        }
+    }
+}
