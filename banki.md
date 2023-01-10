@@ -782,8 +782,50 @@ console.log(displayName());
 - **Source:**
 - [ ] Explain the difference between mutable and immutable objects.
 - **Explanation:**
+  immutable - once a primitive value is created it cannot be changed. But the variable that holds it can be reassigned to another value
+  muttable - can be changed without creating an new value.
 - **Use:**
+  Note that you can easily prove mutability: an object is mutable as long as it offers one way to change its properties. On the other hand, immutability is hard to prove if there are no language semantics to secure it — it is a matter of developer contract.
 - **Example:**
+
+```javascript
+let num1 = 66;
+let str1 = "Hello";
+let boolean1 = true;
+let arr1 = [1, 2, 3];
+let obj1 = { name: "yuki", age: "25" };
+
+// Primitive: Copy items
+let num2 = num1;
+let str2 = str1;
+let boolean2 = boolean1;
+
+// Update the copies
+num2 = num2 - 10;
+str2 += " world";
+boolean2 = false;
+
+// print 65
+console.log(num1);
+// print "Hello"
+console.log(str1);
+// print "true"
+console.log(boolean1);
+
+// Object: Copy items
+let arr2 = arr1;
+let obj2 = obj1;
+
+// Update the copies
+arr2.push(4, 5, 6);
+obj2.name = "UU";
+
+// print [1, 2, 3, 4, 5, 6]
+console.log(arr1);
+// print { name: 'UU', age: '25' }
+console.log(obj1);
+```
+
 - **Source:**
 - [ ] Explain the difference between synchronous and asynchronous functions.
 - **Explanation:**
