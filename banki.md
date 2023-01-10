@@ -783,7 +783,7 @@ console.log(displayName());
 - [ ] Explain the difference between mutable and immutable objects.
 - **Explanation:**
   immutable - once a primitive value is created it cannot be changed. But the variable that holds it can be reassigned to another value
-  muttable - can be changed without creating an new value.
+  mutable - can be changed without creating an new value.
 - **Use:**
   Note that you can easily prove mutability: an object is mutable as long as it offers one way to change its properties. On the other hand, immutability is hard to prove if there are no language semantics to secure it — it is a matter of developer contract.
 - **Example:**
