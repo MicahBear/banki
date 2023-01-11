@@ -844,6 +844,14 @@ console.log(obj1);
 - **Source:**
 - [ ] What are the differences between variables created using `let`, `var` or `const`?
 - **Explanation:**
+  var: is hoisted to the top of their scope.and initialized as undefined. variables can be redeclared and updated. Can be globally scoped or function/locally scoped. problem comes that redeclaring if you are not aware of it.
+  let: is block scoped. so if it is declared between { } it is only available in that block.
+  unlike you can not redeclare. you can update. But if the same variable is defined in different scopes there will be no error because the are in different scopes.
+  let is hoisted to the top of its scope but it is not initialized.. so if you use before you declare there will be a reference error.
+  const: variables maintain constant values. block scoped. Can not be updated or redeclared. every const declaration must be initialized at the time of declaration...
+  Note-- const object cannot be updated the properties of that object can be updated.
+  const is hoisted to top of scoped.
+
 - **Use:**
 - **Example:**
 - **Source:**
